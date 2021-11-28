@@ -44,7 +44,7 @@ class Profile(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=20)
-    uploaded = models.DateTimeField(auto_now=True)
+    updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'skill'
