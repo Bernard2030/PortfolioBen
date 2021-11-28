@@ -5,17 +5,16 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 # Model for Home Page
 class Home(models.Model):
-    title = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
     greetings_1 = models.CharField(max_length=5)
     greetings_2 = models.CharField(max_length=5)
-    body = models.TextField()
     image = CloudinaryField('image')
 
     # show time when uploaded
-    uploaded = models.DateTimeField(auto_now=True)
+    updated = models.DateTimeField(auto_now=True)
     
     def __str__(self):
-        return self.title
+        return self.name
 
 
 #  Model for About Page
@@ -27,7 +26,7 @@ class About(models.Model):
     profileimage = CloudinaryField('image')
 
     # show time when uploaded
-    uploaded = models.DateTimeField(auto_now=True)
+    updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.carreer
@@ -71,7 +70,7 @@ class Portfolio(models.Model):
     title = models.CharField(max_length=50)
     portfolio_image = CloudinaryField('image')
     link = models.URLField(max_length=200)
-    uploaded = models.DateTimeField(auto_now=True)
+    updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title

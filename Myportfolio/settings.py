@@ -13,14 +13,29 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 
+# cloudinary
 import cloudinary
-import dj_database_url
- 
+import cloudinary.uploader
+import cloudinary.api
+
+
+
+
+# adding config
 cloudinary.config(
-    cloud_name=os.environ.get('CLOUDINARY_CLOUD_NAME'),
-    api_key=os.environ.get('CLOUDINARY_API_KEY'),
-    api_secret=os.environ.get('CLOUDINARY_API_SECRET'),
+  cloud_name = 'bermard2030',
+  api_key = '372829562127799',
+  api_secret = '-l-gRj-0LwQ7xLfnPWRE7DHfBu8',
 )
+
+# import cloudinary
+# import dj_database_url
+ 
+# cloudinary.config(
+#     cloud_name=os.environ.get('CLOUDINARY_CLOUD_NAME'),
+#     api_key=os.environ.get('CLOUDINARY_API_KEY'),
+#     api_secret=os.environ.get('CLOUDINARY_API_SECRET'),
+# )
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
