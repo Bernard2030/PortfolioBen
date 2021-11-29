@@ -61,19 +61,19 @@ class Skills(models.Model):
 
 
     def __str__(self):
-        return self.name 
+        return self.skills_name 
 
 
 # Portfolio section
 
 class Portfolio(models.Model):
-    title = models.CharField(max_length=50)
+    
     portfolio_image = CloudinaryField('image')
     link = models.URLField(max_length=200)
-    updated = models.DateTimeField(auto_now=True)
+    
 
     def __str__(self):
-        return self.title
+        return self.link
 
 
 

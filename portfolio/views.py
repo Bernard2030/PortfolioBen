@@ -17,10 +17,21 @@ def home(request):
     about = About.objects.latest('updated')
     profiles = Profile.objects.filter(about=about)  
 
+# category view
+
+    category = Category.objects.all()
+
+# portfolio view
+
+    portfolio = Portfolio.objects.all() 
+
+
     context = {
         "home": home,
         "about": about,
         "profiles": profiles, 
+        "category": category,
+        "portfolio": portfolio,
     }
     return render(request, 'home.html', context) 
 
